@@ -1,0 +1,167 @@
+html, body, #root, .App {
+  height: 100%; /* Make sure all parent elements have height 100% */
+  margin: 0; /* Remove default margins */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.responseField {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  text-align: left;
+  max-width: 400px;
+}
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.chat-container {
+  width: 80%;
+  height: 60vh; /* 60% of the viewport height */
+  margin-top: 20px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.message.user {
+  background-color: #cc5500;
+  color: white;
+  align-self: flex-end;
+  margin-left: 30%;
+}
+
+.message.bot {
+  background-color: #e2e2e2;
+  color: black;
+  align-self: flex-start;
+  margin-right: 30%;
+}
+
+.input-container {
+  width: 100% !important;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.textInput {
+  font-size: large;
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #cc5500;
+  color: white;
+  cursor: pointer;
+}
+
+
+.chat-header {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #cc5500;
+  
+  border-radius: 20px;
+}
+
+.hans-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 10px;
+}
+
+.hans-introduction {
+  display: flex;
+  width: 80%;
+  margin-top: 50px;
+  align-items: center;
+  padding: 20px;
+  background-color: #cc5500; /* Light background for the section */
+  margin-bottom: 20px; /* Space before the chat container */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+.hans-image2 {
+  width: 120px; /* Slightly larger for this section */
+  height: 120px;
+
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hans-textfield {
+  flex: 1; /* Takes up remaining space */
+  background-color: white; /* Different background for the text field */
+  padding: 15px;
+  color: black;
+  border-radius: 5px; /* Rounded corners for the text field */
+  border: 1px solid #ddd; /* Border to distinguish the field */
+}
+
+.hans-textfield p {
+  margin: 0; /* Remove default paragraph margins */
+}
