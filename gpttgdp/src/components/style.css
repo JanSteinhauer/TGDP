@@ -12,7 +12,7 @@ body {
   background-color: var(--app-bg);
   font-family: "DM Sans", sans-serif;
   --text-dark: #1a2f45;
-  --text-light: #445e78;
+  --text-light: #060415;
   --chat-box-dark: #1b243b;
   --chat-box-light: #fff;
   --button-text: #fff;
@@ -37,14 +37,14 @@ body {
   --button-bg: #ff964a;
   --text-dark: rgba(255,255,255,1);
   --text-light: rgba(255,255,255,.6);
-  --info-box-1: rgba(160, 186, 242, 0.5);
-  --info-box-2: rgba(168, 240, 229, 0.55);
-  --info-box-3: rgba(194, 168, 240, 0.34);
-  --info-box-4: rgba(240, 185, 168, 0.34);
+  --info-box-1: #060415;
+  --info-box-2: #060415;
+  --info-box-3: #060415;
+  --info-box-4: #060415;
   --toggle-bg: #ff964a;
   --toggle-bg-off: #6895a3;
   --message-box-2: #ff964a;
-  --message-box-1: #576c99;
+  --message-box-1: #060415;
   --logo-path-1: #ff964a;
   --logo-path-2: #576c99;
   --box-shadow: rgba( 18, 23, 45 ,.6) 0px 8px 24px;
@@ -367,7 +367,8 @@ body[data-theme=dark] {
 
 .app-main {
   flex: 3;
-  height: 100%;
+  
+  height: 500px;
   background-color: var(--box-color);
   border-radius: 10px;
   padding: 16px;
@@ -578,6 +579,7 @@ body[data-theme=dark] {
 .activity-info-box.time {
   background-color: var(--info-box-1);
   color: var(--info-box-color-1);
+  display: initial;
 }
 .activity-info-box.time .info-icon-wrapper {
   background-color: var(--info-icon-bg-1);
@@ -592,6 +594,7 @@ body[data-theme=dark] {
 .activity-info-box.meeting {
   background-color: var(--info-box-3);
   color: var(--info-box-color-3);
+  display: initial;
 }
 .activity-info-box.meeting .info-icon-wrapper {
   background-color: var(--info-icon-bg-3);

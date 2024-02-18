@@ -3,14 +3,14 @@ import './style.css'; // Assuming global styling is acceptable
 import hansImage from '../guy.png';
 
 
-function AIChat() {
+function AIChat(props) {
   
   return (
     <div class="message-wrapper">
     <img class="message-pp" src={hansImage}></img>
     <div class="message-box-wrapper">
       <div class="message-box">
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur
+        {props.message}
       </div>
 
     </div>

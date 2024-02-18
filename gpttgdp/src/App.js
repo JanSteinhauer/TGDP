@@ -68,12 +68,12 @@ function App() {
           <button onClick={() => gpt()}>Senden</button>
         </div> */}
         <br></br>
-        <div className="hans-introduction">
-  <img src={hansImage} alt="Hans" className="hans-image2" />
-  <div className="hans-textfield">
+        {/* <div className="hans-introduction"> */}
+  {/* <img src={hansImage} alt="Hans" className="hans-image2" />
+  {/* <div className="hans-textfield">
     <p>Ich bin Hans. Ich bin eine KI, welche darauf trainiert wurde Texas Deutsch zu sprechen. Gerne spreche ich über meine Heimat Fredericksburg, den zweiten Weltkrieg und natürlich über Texas.</p>
-  </div>
-</div>
+  </div> */}
+{/* </div>  */}
       </header>
     </div>
   );

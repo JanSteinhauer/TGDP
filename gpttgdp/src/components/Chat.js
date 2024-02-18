@@ -34,8 +34,8 @@ const Chat = () => {
   </div>
   <div class="app-main">
     <div class="chat-wrapper">
-        <AIChat></AIChat>
-        <UserChat></UserChat>
+        <AIChat message='Ich bin Hans. Ich bin eine KI, welche darauf trainiert wurde Texas Deutsch zu sprechen. Gerne spreche ich über meine Heimat Fredericksburg, den zweiten Weltkrieg und natürlich über Texas.'></AIChat>
+        {/* <UserChat message='how old are you'></UserChat> */}
 
     </div>
     <div class="chat-input-wrapper">
@@ -63,95 +63,35 @@ const Chat = () => {
     <div class="app-activity-box">
       <div class="activity-info-boxes">
         <div class="activity-info-box time">
-          <div class="info-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-clock" viewBox="0 0 24 24">
-              <defs/>
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
+       
           <div class="info-text-wrapper">
-            <span class="info-text-upper">13h</span>
-            <span class="info-text-bottom">Time</span>
+            <span class="info-text-upper">Bauer</span>
+            <span class="info-text-bottom">Am Wochenend</span>
           </div>
         </div>
         <div class="activity-info-box atendee">
-          <div class="info-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-users" viewBox="0 0 24 24">
-              <defs/>
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-            </svg>
-          </div>
+         
           <div class="info-text-wrapper">
-            <span class="info-text-upper">32</span>
-            <span class="info-text-bottom">Atendeed</span>
+            <span class="info-text-upper">Stammtisch</span>
+            <span class="info-text-bottom">mit Freunden aus Fredericksburg</span>
           </div>
         </div>
         <div class="activity-info-box meeting">
-          <div class="info-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-calendar" viewBox="0 0 24 24">
-              <defs/>
-              <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
-              <path d="M16 2v4M8 2v4M3 10h18"/>
-            </svg>
-          </div>
+          
           <div class="info-text-wrapper">
-            <span class="info-text-upper">122</span>
-            <span class="info-text-bottom">Meetings</span>
+            <span class="info-text-upper">Wurstfan</span>
+            <span class="info-text-bottom">Ich liebe Blutwurst</span>
           </div>
         </div>
         <div class="activity-info-box reject">
-          <div class="info-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-x-square" viewBox="0 0 24 24">
-              <defs/>
-              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
-              <path d="M9 9l6 6M15 9l-6 6"/>
-            </svg>
-          </div>
+          
           <div class="info-text-wrapper">
-            <span class="info-text-upper">12</span>
-            <span class="info-text-bottom">Rejected</span>
+            <span class="info-text-upper">Schule</span>
+            <span class="info-text-bottom">Meine Liebingsfach war Mathe</span>
           </div>
         </div>
       </div>
-      <div class="activity-info-header">
-        <span class=
-"info-header-bold">Current Week</span>
-         <span class=
-"info-header-light">Activity</span>
-      </div>
-      <div class="activity-days-wrapper">
-        <div class="day">
-          <div class="chart"></div>
-          <span>MON</span>
-        </div>
-        <div class="day">
-          <div class="chart"></div>
-          <span>TUE</span>
-        </div>
-        <div class="day current">
-          <div class="chart"></div>
-          <span>WED</span>
-        </div>
-        <div class="day">
-          <div class="chart"></div>
-          <span>THU</span>
-        </div>
-        <div class="day">
-          <div class="chart"></div>
-          <span>FRI</span>
-        </div>
-        <div class="day">
-          <div class="chart"></div>
-          <span>SAT</span>
-        </div>
-        <div class="day">
-          <div class="chart"></div>
-          <span>SUN</span>
-        </div>
-      </div>
+
     </div>
 
   </div>
