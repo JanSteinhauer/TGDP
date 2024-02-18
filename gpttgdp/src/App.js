@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import OpenAI from "openai";
 import hansImage from './guy.png';
+import Chat from './components/Chat';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -43,18 +44,20 @@ function App() {
     <div className="App">
       <header className="App-header">
       <div className="chat-header">
-          <img src={hansImage} alt="Hans" className="hans-image" />
+          {/* <img src={hansImage} alt="Hans" className="hans-image" /> */}
           <h3>Schreibe mit Hans aus Fredericksburg, Tx</h3>
         </div>
-        <div className="chat-container">
+        <Chat></Chat>
+      
+        {/* <div className="chat-container">
         
           {messages.map((msg, index) => (
             <div key={index} className={`message ${msg.sender}`}>
               {msg.text}
             </div>
           ))}
-        </div>
-        <div className="input-container">
+        </div> */}
+        {/* <div className="input-container">
           <input
             type="text"
             value={inputText}
@@ -63,7 +66,7 @@ function App() {
             placeholder="Frage mich etwas"
           />
           <button onClick={() => gpt()}>Senden</button>
-        </div>
+        </div> */}
         <br></br>
         <div className="hans-introduction">
   <img src={hansImage} alt="Hans" className="hans-image2" />

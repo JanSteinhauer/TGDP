@@ -19,6 +19,7 @@ html, body, #root, .App {
 }
 
 .App-header {
+  margin-top: 20px;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -97,7 +98,7 @@ html, body, #root, .App {
 }
 
 .textInput {
-  font-size: large;
+  font-size: medium;
   width: 70%;
   padding: 10px;
   margin-right: 10px;
@@ -116,6 +117,7 @@ button {
 
 
 .chat-header {
+  margin-top: 20px;
   display: flex;
   width: 85%;
   align-items: center;
@@ -154,6 +156,7 @@ button {
 }
 
 .hans-textfield {
+  font-size: medium;
   flex: 1; /* Takes up remaining space */
   background-color: white; /* Different background for the text field */
   padding: 15px;
