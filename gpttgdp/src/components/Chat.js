@@ -5,13 +5,35 @@ import AIChat from './AIChat';
 import UserChat from './UserChat';
 
 const Chat = () => {
-  // Example state for managing messages
+  const [inputText, setInputText] = useState('');
   const [messages, setMessages] = useState([]);
 
-  // Handle sending a message (update state and potentially send to backend)
-  const sendMessage = (message) => {
-    // Logic to send message
-    setMessages([...messages, message]);
+  const handleInputChange = (event) => {
+    setInputText(event.target.value);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent default Enter key action (e.g., form submission)
+      sendMessage();
+    }
+  };
+
+  const sendMessage = async () => {
+    const userMessage = inputText.trim();
+    if (!userMessage) return; // Prevent sending empty messages
+
+    // Add user's message to messages state
+    setMessages((prevMessages) => [...prevMessages, { text: userMessage, sender: 'user' }]);
+
+    // Here you would call your API to get the response
+    // For demonstration, I'm adding a placeholder response after a delay
+    setTimeout(() => {
+      const botResponse = "This is a placeholder response from the bot.";
+      setMessages((prevMessages) => [...prevMessages, { text: botResponse, sender: 'bot' }]);
+    }, 1200);
+
+    setInputText(''); // Clear input after sending
   };
 
   return (
@@ -35,7 +57,10 @@ const Chat = () => {
   <div class="app-main">
     <div class="chat-wrapper">
         <AIChat message='Ich bin Hans. Ich bin eine KI, welche darauf trainiert wurde Texas Deutsch zu sprechen. Gerne spreche ich über meine Heimat Fredericksburg, den zweiten Weltkrieg und natürlich über Texas.'></AIChat>
-        {/* <UserChat message='how old are you'></UserChat> */}
+        {messages.map((message, index) => message.sender === 'user' ? 
+            <UserChat key={index} message={message.text} /> : 
+            <AIChat key={index} message={message.text} />
+          )}
 
     </div>
     <div class="chat-input-wrapper">
@@ -46,7 +71,14 @@ const Chat = () => {
         </svg>
       </button>
       <div class="input-wrapper">
-        <input type="text" class="chat-input" placeholder="Enter your message here"></input>
+      <input 
+            type="text" 
+            className="chat-input" 
+            placeholder="Bitte Frage mich etwas." 
+            value={inputText} 
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown} // Add the onKeyDown event listener
+          />
         <button class="emoji-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-smile" viewBox="0 0 24 24">
           <defs/>
@@ -55,7 +87,7 @@ const Chat = () => {
         </svg>
       </button>
       </div>
-      <button class="chat-send-btn">Send</button>
+      <button class="chat-send-btn" onClick={sendMessage}>Send</button>
     </div>
   </div>
   <div class="app-right">
