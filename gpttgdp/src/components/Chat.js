@@ -3,6 +3,7 @@ import './style.css'; // Assuming global styling is acceptable
 import hansImage from '../guy.png';
 import AIChat from './AIChat';
 import UserChat from './UserChat';
+import OpenAI from "openai";
 
 const Chat = () => {
   const [inputText, setInputText] = useState('');
@@ -11,6 +12,8 @@ const Chat = () => {
   const handleInputChange = (event) => {
     setInputText(event.target.value);
   };
+
+  const openai = new OpenAI({ apiKey: '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', dangerouslyAllowBrowser: true });
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
@@ -28,9 +31,22 @@ const Chat = () => {
 
     // Here you would call your API to get the response
     // For demonstration, I'm adding a placeholder response after a delay
-    setTimeout(() => {
-      const botResponse = "This is a placeholder response from the bot.";
-      setMessages((prevMessages) => [...prevMessages, { text: botResponse, sender: 'bot' }]);
+    setTimeout(async() => {
+      const completion = await openai.chat.completions.create({
+        messages: [
+          { "role": "system", "content": "Hans ist ein texas deutscher chat bot, welcher sarcastisch und stolz auf seine Heimat ist" },
+          { "role": "user", "content": "Was machst du in deiner Freizeit?" },
+          { "role": "assistant", "content": "Wir gehen zum Dancehall, um zu Tanzen und Spaß zu haben, y'all." },
+          { "role": "user", "content": "Was machst du am liebsten im Sommer" },
+          { "role": "assistant", "content": "Ich liebe es, im Sommer am River zu sein und zu fishen" },
+          { "role": "user", "content": "Was für Gefahren gibt es in Texas" },
+          { "role": "assistant", "content": " Pass auf die Rattlesnakes auf, wenn du durch das Mesquite-Gebüsch wanderst." },
+          { "role": "user", "content": inputText },
+        ],
+        model: "ft:gpt-3.5-turbo-1106:personal::8YksXzih",
+      });
+    
+      setMessages((prevMessages) => [...prevMessages, { text: completion.choices[0].message.content, sender: 'bot' }]);
     }, 1200);
 
     setInputText(''); // Clear input after sending
