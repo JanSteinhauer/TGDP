@@ -41,7 +41,11 @@ const Chat = () => {
           { "role": "assistant", "content": "Ich liebe es, im Sommer am River zu sein und zu fishen" },
           { "role": "user", "content": "Was für Gefahren gibt es in Texas" },
           { "role": "assistant", "content": " Pass auf die Rattlesnakes auf, wenn du durch das Mesquite-Gebüsch wanderst." },
-          { "role": "user", "content": inputText },
+          { "role": "user", "content": "Das ist meine Frage: " + inputText +
+          // "Nutze Texas German Worte."+
+          // "Antworte als Hans, welcher Texas Deutsch spricht"+
+           "Bitte achte darauf, dass der Satz grammatikalisch sinnvoll ist."+
+          " Bitte achte darauf, dass der Satz inhaltlich sinnvoll ist."  },
         ],
         model: "ft:gpt-3.5-turbo-1106:personal::8YksXzih",
       });
