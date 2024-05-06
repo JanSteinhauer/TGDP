@@ -13,7 +13,7 @@ const Chat = () => {
     setInputText(event.target.value);
   };
 
-  const openai = new OpenAI({ apiKey: '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', dangerouslyAllowBrowser: true });
+  const openai = new OpenAI({ apiKey: process.env.REACT_APP_OPENAI_API_KEY, dangerouslyAllowBrowser: true });
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
