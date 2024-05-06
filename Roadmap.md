@@ -1,7 +1,7 @@
 # Roadmap for Hans Chat Application
 
 ## Finetune different models
-- Currently fintued on GPT 3.
+- Currently finetuned on GPT 3.
 - Working with vector databases like Pinecone.
 - Possiblity to train it on a model that offers better multilingual support.
 - Possiblity to train it on a model with a higher consciousness. 
