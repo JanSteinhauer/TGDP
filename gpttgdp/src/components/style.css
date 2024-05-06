@@ -382,10 +382,10 @@ body[data-theme=dark] {
   background-color: var(--box-color);
   border: 1px solid var(--box-border);
 }
-/* 
+
 .chat-wrapper {
   overflow: auto;
-} */
+}
 
 
 
