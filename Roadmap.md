@@ -1,5 +1,11 @@
 # Roadmap for Hans Chat Application
 
+## Finetune different models
+- Currently fintued on GPT 3.
+- Working with vector databases like Pinecone.
+- Possiblity to train it on a model that offers better multilingual support.
+- Possiblity to train it on a model with a higher consciousness. 
+
 ## User Experience (UX) Improvements
 - Conduct user research to identify UX challenges and areas for improvement.
 - Redesign the user interface to improve visual appeal and user interaction.
